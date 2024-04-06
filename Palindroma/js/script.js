@@ -24,15 +24,27 @@ inputForm.addEventListener ("submit", function(e) {
 
     const newWord = newWordInput.value;
 
-    console.log(newWord);
+    console.log(newWord, typeof newWord);
 
     if (isPalindrome(newWord) === true) {
+
+        messageOutput.innerHTML = (`The word <br> "${newWord}" <br> is palindrome.`)
+
+        messageOutput.classList.remove("border-danger");
+
+        messageOutput.classList.remove("text-danger");
 
         messageOutput.classList.add("border-success");
 
         messageOutput.classList.add("text-success");
 
     } else {
+
+        messageOutput.innerHTML = (`The word <br> "${newWord}" <br> is not palindrome.`)
+
+        messageOutput.classList.remove("border-success");
+
+        messageOutput.classList.remove("text-success");
 
         messageOutput.classList.add("border-danger");
 
