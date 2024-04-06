@@ -16,7 +16,7 @@ Creare una funzione per capire se la parola inserita è palindroma.
 
 ### LOGICAL EXECUTION
 
-- **ADD EVENT** *Click* on (listItemElem)
+- **ADD EVENT** *Click* on (inputForm)
 
     - [x] Define constant for input word value. (newWord)
 
