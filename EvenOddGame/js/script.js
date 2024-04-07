@@ -36,25 +36,25 @@ inputForm.addEventListener ("submit", function(e) {
 
     const userNum = parseInt(numInput.value);
 
-    console.log(userNum, typeof userNum);
+    console.log("user number", userNum, typeof userNum);
 
     // Define constant for inserted choise value
 
     const userChoise = userChoiseInput.value;
 
-    console.log(userChoise, typeof userChoise);
+    console.log("user choise", userChoise, typeof userChoise);
 
     // Define constant for random number between 1 and 5 value
 
     const gameRandomNum = getRandomNum( 0, 5 );
 
-    console.log(gameRandomNum, typeof gameRandomNum);
+    console.log("random number", gameRandomNum, typeof gameRandomNum);
 
     // Define constant for array of game numbers
 
     const gameNums = [];
 
-    console.log(gameNums, typeof gameNums);
+    console.log("empty array", gameNums, typeof gameNums);
 
     // Push (gameRandomNum) and (userNum) in array(gameNums).
 
@@ -62,17 +62,21 @@ inputForm.addEventListener ("submit", function(e) {
 
     gameNums.push(gameRandomNum);
 
-    console.log(gameNums, typeof gameNums);
+    console.log("array with input numbers", gameNums, typeof gameNums);
 
     // Define constant for random number between 1 and 5 value
 
     const sumNum = sum(gameNums);
 
-    console.log(sumNum, typeof sumNum);
+    console.log("return of sum function", sumNum, typeof sumNum);
+
+
+
+    console.log("return of isEven function", isEven(sumNum), typeof isEven(sumNum));
 
     // OUTPUT
 
-    if (isEven(sumNum) === true) {
+    if (isEven(sumNum) === userChoise) {
 
         messageOutput.innerHTML = (`Congratulations! You won.`)
 
@@ -83,6 +87,8 @@ inputForm.addEventListener ("submit", function(e) {
         messageOutput.classList.add("border-success");
 
         messageOutput.classList.add("text-success");
+
+        console.log("return of isEven function", isEven(sumNum), typeof isEven(sumNum));
 
     } else {
 
@@ -95,6 +101,8 @@ inputForm.addEventListener ("submit", function(e) {
         messageOutput.classList.add("border-danger");
 
         messageOutput.classList.add("text-danger");
+
+        console.log("return of isEven function", isEven(sumNum), typeof isEven(sumNum));
 
     };
 

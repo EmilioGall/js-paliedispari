@@ -35,11 +35,11 @@ function sum(arrayToSum) {
  */
 function isEven(numToCheck) {
 
-  let result = false; // boolean
+  let result = "odd"; // boolean
 
   if (numToCheck % 2 === 0) {
 
-    result = true;
+    result = "even";
 
   };
 
